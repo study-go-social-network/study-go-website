@@ -319,6 +319,12 @@
                 </c:if>
             </c:forEach>
         </div>
+
+        <div id="usermanual">
+            <button type="button" class="btn btn-info">
+                <a href="https://drive.google.com/file/d/1WwFEfKQ35GT6pd4IxHQf4uXrJru31m46/view" style="color:inherit;">User Manual</a>
+            </button>
+        </div>
     </div>
 </div>
 

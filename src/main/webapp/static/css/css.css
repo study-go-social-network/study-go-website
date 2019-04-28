@@ -125,3 +125,9 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
+#usermanual {
+    position: fixed;
+    bottom: -4px;
+    right: 10px;
+}

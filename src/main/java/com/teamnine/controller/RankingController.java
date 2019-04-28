@@ -42,15 +42,6 @@ public class RankingController {
             double total = rs.get(i).getTotal();
             double studytime = rs.get(i).getTime();
 
-            // For the test record
-            int postnum = rs.get(i).getPostnum();
-            int follownum = rs.get(i).getFollownum();
-            if (postnum == 1 && follownum == 0) {
-                total = 0.5;
-                rs.get(i).setTotal(total);
-                rankingService.updateRankingTotal(total, rs.get(i).getUserid());
-            }
-
             // Round the double up to 2 decimals
             DecimalFormat df = new DecimalFormat("0.00");
             rs.get(i).setTime(Double.parseDouble(df.format(studytime)));

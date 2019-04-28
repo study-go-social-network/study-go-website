@@ -192,11 +192,11 @@ CREATE TABLE `ranking` (
 -- Records of ranking
 -- ----------------------------
 
-INSERT INTO `ranking` VALUES ('1', '26', 'Viavatarn', '0.00', '0', '1', '0', '0', '0', '0', '0');
-INSERT INTO `ranking` VALUES ('2', '28', 'Jack', '0.00', '0', '1', '0', '0', '0', '0', '0');
-INSERT INTO `ranking` VALUES ('3', '29', 'Mike', '0.00', '0', '1', '0', '0', '0', '0', '0');
-INSERT INTO `ranking` VALUES ('4', '43', 'Jervis', '0.00', '0', '1', '0', '0', '0', '0', '0');
-INSERT INTO `ranking` VALUES ('5', '44', 'Tom', '0.00', '0', '1', '0', '0', '0', '0', '0');
+INSERT INTO `ranking` VALUES ('1', '26', 'Viavatarn', '0.00', '0', '1', '0', '0', '0', '0', '0.5');
+INSERT INTO `ranking` VALUES ('2', '28', 'Jack', '0.00', '0', '1', '0', '0', '0', '0', '0.5');
+INSERT INTO `ranking` VALUES ('3', '29', 'Mike', '0.00', '0', '1', '0', '0', '0', '0', '0.5');
+INSERT INTO `ranking` VALUES ('4', '43', 'Jervis', '0.00', '0', '1', '0', '0', '0', '0', '0.5');
+INSERT INTO `ranking` VALUES ('5', '44', 'Tom', '0.00', '0', '1', '0', '0', '0', '0', '0.5');
 INSERT INTO `ranking` VALUES ('6', '45', 'a', '0.00', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `ranking` VALUES ('7', '46', 'b', '0.00', '0', '0', '0', '0', '0', '0', '0');
 INSERT INTO `ranking` VALUES ('8', '47', '111', '0.00', '0', '0', '0', '0', '0', '0', '0');
