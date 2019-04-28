@@ -1,2 +1,2 @@
-# social-network
+# StudyGO (Website)
 http://www.study-go.top
