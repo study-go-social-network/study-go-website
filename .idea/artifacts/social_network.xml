@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="social-network">
+    <output-path>$PROJECT_DIR$/classes/artifacts/social_network</output-path>
+    <root id="archive" name="social-network.war">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,71 @@
+﻿.nav-user-img {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-user-img-dropdown {
+    width: 100px;
+    height: 100px;
+}
+
+a:focus, a:hover {
+    outline: none !important;
+}
+
+.no-hover:hover {
+    background: none;
+    color: none;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus {
+    outline: none;
+    color: #0a8cd2;
+    border: 1px solid #ddd;
+    border-top: 1px solid #f00 !important;
+    background-color: #EEE !important;
+}
+
+.pagination > .active {
+    background-color: none !important;
+}
+
+table {
+    color: #666666;
+}
+
+.label {
+    color: #fff !important;
+}
+
+.panel-2 {
+    border-top: 3px solid #244d9f;
+
+}
+
+.panel-3 {
+    border-top: 3px solid #1963AA;
+}
+
+.tb-hover > tbody > tr:hover {
+    background-color: #F7F7F7;
+}
+
+.user-li-head {
+    background-color: #F9F9F9;
+    margin-top: 0;
+    border-bottom: 1px solid #EEEEEE;
+    padding-top: 10px;
+}
+
+.navbar-brand {
+    padding-left: 30px;
+}
+
+@media only screen and (max-width: 769px) {
+
+    .nav-left {
+        display: none;
+        z-index: 999;
+    }
+
+}
