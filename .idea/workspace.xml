@@ -8,15 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a01cfb2-404d-4008-8c58-52c3f6ed5f89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/artifacts/social_network/social-network.war" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/social_network/social-network.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/teamnine/controller/RankingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/teamnine/controller/RankingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/content/content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/content/content.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/css.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/social-network.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/social-network.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/social-network/content/content.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/social-network/content/content.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/social-network/static/css/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/social-network/static/css/css.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -140,7 +133,7 @@
           <entry key="iml" value="7" />
           <entry key="java" value="325" />
           <entry key="js" value="13" />
-          <entry key="jsp" value="154" />
+          <entry key="jsp" value="155" />
           <entry key="properties" value="19" />
           <entry key="sql" value="5" />
           <entry key="xml" value="121" />
@@ -154,7 +147,7 @@
           <entry key="IDEA_MODULE" value="7" />
           <entry key="Image" value="2" />
           <entry key="JAVA" value="325" />
-          <entry key="JSP" value="154" />
+          <entry key="JSP" value="155" />
           <entry key="JavaScript" value="13" />
           <entry key="Properties" value="19" />
           <entry key="SQL" value="5" />
@@ -192,35 +185,7 @@
     <favorites_list name="BBS" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/teamnine/controller/RankingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mbg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/dbconfig.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -356,10 +321,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/css/css.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/content/content.jsp" />
         <option value="$PROJECT_DIR$/mbg.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/dbconfig.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/teamnine/controller/RankingController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/content/content.jsp" />
       </list>
     </option>
   </component>
@@ -544,55 +509,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="social-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="social-network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="social-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="social-network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="social-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="social-network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="social-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="social-network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="social-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="social-network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="social-network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="social-network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -758,12 +674,12 @@
       <workItem from="1555852918715" duration="8934000" />
       <workItem from="1556092322377" duration="596000" />
       <workItem from="1556210154852" duration="35822000" />
-      <workItem from="1556445362833" duration="15664000" />
+      <workItem from="1556445362833" duration="17078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="343634000" />
+    <option name="totallyTimeSpent" value="345048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -776,7 +692,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4949349" visible="true" weight="0.17158177" />
       <window_info id="Structure" order="1" sideWeight="0.50506514" side_tool="true" weight="0.17627347" />
@@ -1161,13 +1076,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamnine/controller/RankingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/content/content.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="324" column="118" selection-start-line="324" selection-start-column="118" selection-end-line="324" selection-end-column="118" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#button#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="324" column="91" selection-start-line="324" selection-start-column="91" selection-end-line="324" selection-end-column="91" />
         </state>
       </provider>
     </entry>
@@ -1182,13 +1101,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/teamnine/controller/RankingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>

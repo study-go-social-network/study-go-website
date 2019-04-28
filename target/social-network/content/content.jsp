@@ -322,7 +322,7 @@
 
         <div id="usermanual">
             <button type="button" class="btn btn-info">
-                <a href="https://drive.google.com/file/d/1WwFEfKQ35GT6pd4IxHQf4uXrJru31m46/view" style="color:inherit;">User Manual</a>
+                <a href="https://drive.google.com/open?id=1pBjM4Q9Bzpek6stHO5apiaKj1Mf34rkK" style="color:inherit;">User Manual</a>
             </button>
         </div>
     </div>
