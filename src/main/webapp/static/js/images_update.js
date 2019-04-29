@@ -18,7 +18,7 @@ function f_previewImage_up(file)
         reader.onload = function(evt){img.src = evt.target.result;}
         reader.readAsDataURL(file.files[0]);
     }
-    else //兼容IE
+    else // IE
     {
         var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
         file.select();

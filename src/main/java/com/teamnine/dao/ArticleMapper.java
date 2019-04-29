@@ -27,6 +27,8 @@ public interface ArticleMapper {
 
 	Integer selectUserByArticleId(int fid);
 
+	String selectArticlePhotoByFid(int fid);
+
 	// Query the article table info by fid
 	Article selectByPrimaryKey(Integer fid);
 

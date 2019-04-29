@@ -26,6 +26,6 @@
 	<!-- Profile-upload (modify) avatar -->
 	<jsp:include page="/content/userPhoto.jsp"></jsp:include>
 
-	<script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="300" src="${APP_PATH }/static/js//canvas-nest.js"></script>
+	<script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="200" src="${APP_PATH }/static/js//canvas-nest.js"></script>
 </body>
 </html>
