@@ -82,7 +82,8 @@
                                                             <input type="hidden" name="beuserid"
                                                                    value="${listArticle.userid }">
                                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                            <button type="submit" class="btn btn-sm unfollow"> Unfollow
+                                                            <button type="submit" class="btn btn-sm unfollow">
+                                                                Unfollow
                                                             </button>
                                                         </form>
                                                         <!-- Assign "true" to follow_record when the user is followed -->
@@ -177,7 +178,8 @@
                                                         <form action="${APP_PATH }/favoriteController/setFavorite"
                                                               method="post">
                                                             <input type="hidden" name="userid" value="${userid }">
-                                                            <input type="hidden" name="fid" value="${listArticle.fid }">
+                                                            <input type="hidden" name="fid"
+                                                                   value="${listArticle.fid }">
                                                             <button type="submit"
                                                                     style="border: none;background-color: #ffffff;">
                                                                 <samp title="favorite"
@@ -250,7 +252,8 @@
                 </div>
                 <div class="list">Loading...</div>
                 <div class="text-center more">
-                    <a class="text-info" href="javascript:;" onClick="left_part.loadMore();">Click ---> To load more</a>
+                    <a class="text-info" href="javascript:;" onClick="left_part.loadMore();">Click ---> To load
+                        more</a>
                 </div>
             </div>
             <div class="row">
@@ -322,11 +325,13 @@
 
         <div id="usermanual">
             <button type="button" class="btn btn-info">
-                <a href="https://drive.google.com/open?id=1pBjM4Q9Bzpek6stHO5apiaKj1Mf34rkK" style="color:inherit;">User Manual</a>
+                <a href="https://drive.google.com/open?id=1pBjM4Q9Bzpek6stHO5apiaKj1Mf34rkK" style="color:inherit;">User
+                    Manual</a>
             </button>
         </div>
     </div>
 </div>
+
 
 <jsp:include page="/content/top.jsp"></jsp:include>
 
