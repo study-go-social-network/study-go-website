@@ -127,6 +127,13 @@
     where fid = #{fid,jdbcType=INTEGER}
   </select>
 
+  <select id="selectArticlePhotoByFid" parameterType="java.lang.Integer" resultType="java.lang.String">
+    select
+    a.photo
+    from article a
+    where fid = #{fid,jdbcType=INTEGER}
+  </select>
+
 
   <!-- Delete the article by fid -->
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

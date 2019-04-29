@@ -75,6 +75,11 @@ public class ArticleService {
 		return articleMapper.selectByPrimaryKey(fid);
 	}
 
+	public String getArticlePhoto(int fid) {
+
+		return articleMapper.selectArticlePhotoByFid(fid);
+	}
+
 	/**
 	 * Delete the article by fid
 	 * @param fid
