@@ -25,11 +25,7 @@
     <!-- Home page-Profile settings -->
     <jsp:include page="/head/setup.jsp"></jsp:include>
 
-<<<<<<< HEAD
-    <script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="300" src="${APP_PATH }/static/js//canvas-nest.js"></script>
-=======
-    <script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="300"
+    <script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="200"
             src="${APP_PATH }/static/js//canvas-nest.js"></script>
->>>>>>> Issue #2: Add fade in effect feature of the website by css
 </body>
 </html>

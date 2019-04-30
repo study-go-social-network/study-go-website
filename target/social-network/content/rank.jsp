@@ -43,5 +43,11 @@
             </c:forEach>
         </table>
     </div>
+    <div id="usermanual">
+        <button type="button" class="btn btn-info">
+            <a href="https://drive.google.com/open?id=1pBjM4Q9Bzpek6stHO5apiaKj1Mf34rkK" style="color:inherit;"
+               target="_blank">Help</a>
+        </button>
+    </div>
 </body>
 </html>

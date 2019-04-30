@@ -444,6 +444,8 @@ public class UserController {
             map.put("email", user.getEmail());
         }
 
+        rankingService.updateRankingUsername(user.getName(), user.getUserid());
+
         // Redirect to the method getMyself
         return new ModelAndView("redirect:/userController/getMyself");
     }

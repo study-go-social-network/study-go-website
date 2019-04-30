@@ -18,7 +18,7 @@
 			characterEncoding=UTF-8&amp;useFastDateParsing=false&amp;
 			characterEncoding=UTF-8&amp;useFastDateParsing=false"
 			userId="root"
-			password="tyler0131">
+			password="">
 		</jdbcConnection>
 
 		<!-- Java type parsing -->

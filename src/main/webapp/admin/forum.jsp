@@ -10,10 +10,6 @@
 %>
 </head>
 <body>
-	<!-- <div class="container">
-	<button type="button" class="btn btn-primary" data-toggle="modal"
-		data-target="#forum">Button</button> -->
-
 	<div class="modal fade" id="forum" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel">
 		<div class="modal-dialog" role="document">
@@ -34,9 +30,9 @@
 								id="bname" name="bname" required>
 						</div>
 						<div class="text-success text-center" id="forumSuccess"
-							style="position: relative; top: 0px; font-size: 10px;"></div>
+							style="position: relative; top: 0; font-size: 10px;"></div>
 						<div class="text-danger text-center" id="forumExit"
-							style="position: relative; top: 0px; font-size: 10px;"></div>
+							style="position: relative; top: 0; font-size: 10px;"></div>
 
 						<div class="modal-footer">
 							<button type="reset" class="btn btn-default">Clear</button>

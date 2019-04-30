@@ -127,7 +127,12 @@ a:active {
 }
 
 #usermanual {
-    position: fixed;
-    bottom: -4px;
-    right: 10px;
+    position: absolute;
+    top: 400px;
+    right: 0.1%;
+    height: 20%;
+    bottom: 1%;
+    -webkit-transition: all 1.8s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    z-index: 10;
 }

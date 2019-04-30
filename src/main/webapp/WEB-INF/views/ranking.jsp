@@ -26,6 +26,6 @@
 		<jsp:include page="/content/rank.jsp"></jsp:include>
 	</div>
 
-	<script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="100" src="${APP_PATH }/static/js//canvas-nest.js"></script>
+	<script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="90" src="${APP_PATH }/static/js//canvas-nest.js"></script>
 </body>
 </html>
