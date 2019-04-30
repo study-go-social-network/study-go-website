@@ -24,6 +24,8 @@ public interface RankingMapper {
 
     int updateTotalByPrimaryKey(@Param("total") Double total, @Param("userid") Integer userid);
 
+    int updateUsernameByPrimaryKey(@Param("username") String username, @Param("userid") Integer userid);
+
     List<Ranking> selectByRankingAll();
 
     Double selectByRankingTotal(int userid);

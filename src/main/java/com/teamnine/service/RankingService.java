@@ -59,6 +59,11 @@ public class RankingService {
         rankingMapper.updateTimeByPrimaryKey(time, userid);
     }
 
+    public void updateRankingUsername(String username, int userid) {
+
+        rankingMapper.updateUsernameByPrimaryKey(username, userid);
+    }
+
     public void updateRankingTotal(double total, int userid) {
 
         rankingMapper.updateTotalByPrimaryKey(total, userid);

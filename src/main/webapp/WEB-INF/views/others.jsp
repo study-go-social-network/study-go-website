@@ -24,7 +24,7 @@
         <jsp:include page="/content/otherscontent.jsp"></jsp:include>
     </div>
 
-<script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="200"
+<script type="text/javascript" color="0,0,255" opacity='0.8' zIndex="-2" count="150"
         src="${APP_PATH }/static/js//canvas-nest.js"></script>
 </body>
 </html>

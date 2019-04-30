@@ -325,8 +325,7 @@
 
         <div id="usermanual">
             <button type="button" class="btn btn-info">
-                <a href="https://drive.google.com/open?id=1pBjM4Q9Bzpek6stHO5apiaKj1Mf34rkK" style="color:inherit;">User
-                    Manual</a>
+                <a href="https://drive.google.com/open?id=1pBjM4Q9Bzpek6stHO5apiaKj1Mf34rkK" style="color:inherit;" target="_blank">Help</a>
             </button>
         </div>
     </div>
@@ -337,5 +336,6 @@
 
 <script src="${APP_PATH }/static/js/phones_pc.js"></script>
 <script src="${APP_PATH }/static/js/load_more.js"></script>
+<script src="${APP_PATH }/static/js/floater.js"></script>
 </body>
 </html>

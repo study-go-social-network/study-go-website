@@ -115,6 +115,11 @@
     set total = #{total, jdbcType=DECIMAL}
     where userid = #{userid, jdbcType=INTEGER}
   </update>
+  <update id="updateUsernameByPrimaryKey">
+    update ranking
+    set username = #{username, jdbcType=VARCHAR}
+    where userid = #{userid, jdbcType=INTEGER}
+  </update>
   <select id="selectByRankingAll" parameterType="com.teamnine.bean.Ranking" resultMap="BaseResultMap">
     select
     r.rid, r.userid, r.username, r.time, r.rate, r.postnum, r.favoritenum, r.follownum, r.level, r.sstime, r.total
