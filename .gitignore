@@ -8,7 +8,7 @@ bin
 **/*.log
 **/*.ipr
 **/*.iws
-**/*.xml
+**/mbg.xml
 **/src/main/resources/dbconfig.properties
 **/target/
 **/classes/

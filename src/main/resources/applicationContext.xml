@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<context:component-scan base-package="com.teamnine">
+		<context:exclude-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+
+	<!-- Spring's configuration file, where the main configuration and business logic are related -->
+	<!--=================== Data source configuration ================ -->
+	<!-- Introduce an external configuration file -->
+	<context:property-placeholder location="classpath:dbconfig.properties" />
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+		<property name="user" value="${jdbc.user}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<property name="testConnectionOnCheckin" value="false"/>
+    	<property name="testConnectionOnCheckout" value="true"/>
+    	<property name="preferredTestQuery" value="SELECT 1"/>
+	</bean>
+	<!--=================== Data source configuration-end ================ -->
+
+
+	<!--================== Configuration and integration with MyBatis =============== -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- Specify the location of the mybatis global configuration file -->
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+		<property name="dataSource" ref="dataSource" />
+		<!-- Specify the location of mybatis's mapper file -->
+		<property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+	</bean>
+
+	<!-- Configure the scanner to add the implementation of the mybatis interface to the ioc container -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- Scan all dao interface implementations and add them to the ioc container -->
+		<property name="basePackage" value="com.teamnine.dao"></property>
+	</bean>
+	<!--================== Cnfiguration and integration with MyBatis-end=============== -->
+
+
+	<!-- =============== Transaction control configuration ================ -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<!--Control the data source -->
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- Open annotation-based transactions, use xml configuration form of the transaction
+	    (compared to the main use of the configuration) -->
+	<aop:config>
+		<!-- Pointcut expression -->
+		<aop:pointcut expression="execution(* com.atguigu.crud.service..*(..))"
+			id="txPoint" />
+		<!-- Configuration transaction enhancement -->
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint" />
+	</aop:config>
+	
+	<!-- Configure transaction enhancements, how transactions cut in -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- All methods are transaction methods -->
+			<tx:method name="*" />
+			<!-- All methods starting with get -->
+			<tx:method name="get*" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- =============== Transaction control configuration-end ================ -->
+</beans>

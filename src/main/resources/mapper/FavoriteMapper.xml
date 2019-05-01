@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teamnine.dao.FavoriteMapper">
+  <resultMap id="BaseResultMap" type="com.teamnine.bean.Favorite">
+    <id column="sid" jdbcType="INTEGER" property="sid" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="fid" jdbcType="INTEGER" property="fid" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    sid, userid, fid
+  </sql>
+  
+  <!-- Query favorite information (unconditional) -->
+  <select id="selectByFavorite" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from favorite
+  </select>
+  
+  <!-- Query the favorite info by userid (which articles are favorite) -->
+  <select id="selectByFavoriteUserid" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from favorite
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+  
+  <!-- Add the favorite -->
+  <insert id="insert" parameterType="com.teamnine.bean.Favorite">
+    insert into favorite
+    values (#{sid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, 
+    	#{fid,jdbcType=INTEGER})
+  </insert>
+  
+  <!-- Delete the favorite info -->
+  <delete id="deleteByFavorite" parameterType="com.teamnine.bean.Favorite">
+    delete from favorite
+    where sid = #{sid,jdbcType=INTEGER}
+  </delete>
+  
+  <!-- Delete the favorite (by userid and fid) -->
+  <delete id="deleteFavoriteByUseridAndFid" parameterType="com.teamnine.bean.Favorite">
+    delete from favorite
+    where userid = #{userid,jdbcType=INTEGER} and fid = #{fid,jdbcType=INTEGER}
+  </delete>
+  
+  <!-- Delete the favorite info by fid -->
+  <delete id="deleteByFavoriteByFid" parameterType="java.lang.Integer">
+    delete from favorite
+    where fid = #{fid,jdbcType=INTEGER}
+  </delete>
+  
+  <!-- Delete the favorite info corresponding to the user (by userid) -->
+   <delete id="deleteFavoriteUserid" parameterType="java.lang.Integer">
+    delete from favorite
+    where userid = #{userid,jdbcType=INTEGER}
+  </delete>
+  
+  
+</mapper>
