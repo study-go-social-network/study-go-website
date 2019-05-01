@@ -1,0 +1,13 @@
+# Maven build folder
+target
+bin
+
+# intellij IDE files
+**/*.iml
+**/.idea/
+**/*.log
+**/*.ipr
+**/*.iws
+**/*.xml
+**/target/
+**/classes/
