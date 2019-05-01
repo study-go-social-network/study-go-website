@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamnine.dao.ArticleMapper">
-  <resultMap id="BaseResultMap" type="com.teamnine.bean.Article">
+<mapper namespace="com.studygo.dao.ArticleMapper">
+  <resultMap id="BaseResultMap" type="com.studygo.bean.Article">
     <id column="fid" jdbcType="INTEGER" property="fid" />
     <result column="titles" jdbcType="VARCHAR" property="titles" />
     <result column="fcontent" jdbcType="VARCHAR" property="fcontent" />
@@ -75,7 +75,7 @@
   </sql>
   
   <!-- Query article information (unconditional) (and get the number of comments for each article) -->
-  <select id="selectByArticle" parameterType="com.teamnine.bean.Article" resultMap="BaseResultMap">
+  <select id="selectByArticle" parameterType="com.studygo.bean.Article" resultMap="BaseResultMap">
     select 
     a.fid, a.titles, a.fcontent, a.photo, a.bname, a.time, a.userid, a.username, a.status,count(c.cid) sum,v.photo userphoto
     from article a left join comment c on a.fid=c.fid left join avatar v on a.userid=v.userid
@@ -104,7 +104,7 @@
   </select>
   
   <!-- Query article table info by userid -->
-  <select id="selectByArticleId" parameterType="com.teamnine.bean.Article" resultMap="BaseResultMap">
+  <select id="selectByArticleId" parameterType="com.studygo.bean.Article" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from article
@@ -148,7 +148,7 @@
   </delete>
   
   <!-- Insert article information to the database -->
-  <insert id="insert" parameterType="com.teamnine.bean.Article">
+  <insert id="insert" parameterType="com.studygo.bean.Article">
     insert into article (fid, titles, fcontent, 
       photo, bname, time, 
       userid, username, status
@@ -159,7 +159,7 @@
       )
   </insert>
   
-  <insert id="insertSelective" parameterType="com.teamnine.bean.Article">
+  <insert id="insertSelective" parameterType="com.studygo.bean.Article">
     insert into article
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="fid != null">
@@ -270,7 +270,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.teamnine.bean.Article">
+  <update id="updateByPrimaryKeySelective" parameterType="com.studygo.bean.Article">
     update article
     <set>
       <if test="titles != null">
@@ -302,7 +302,7 @@
   </update>
   
   <!-- update article table -->
-  <update id="updateByPrimaryKey" parameterType="com.teamnine.bean.Article">
+  <update id="updateByPrimaryKey" parameterType="com.studygo.bean.Article">
     update article
     set titles = #{titles,jdbcType=VARCHAR},
       fcontent = #{fcontent,jdbcType=VARCHAR},
@@ -312,14 +312,14 @@
   </update>
   
   <!-- Update the status attribute of the article table (update the review status) -->
-  <update id="updateArticleStatus" parameterType="com.teamnine.bean.Article">
+  <update id="updateArticleStatus" parameterType="com.studygo.bean.Article">
     update article
     set status = #{status,jdbcType=INTEGER}
     where fid = #{fid,jdbcType=INTEGER}
   </update>
   
   <!-- Update the username in the article table -->
-  <update id="updateArticleSetup" parameterType="com.teamnine.bean.Article">
+  <update id="updateArticleSetup" parameterType="com.studygo.bean.Article">
     update article
     set username = #{username,jdbcType=VARCHAR}
     where userid = #{userid,jdbcType=INTEGER}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamnine.dao.FollowMapper">
-  <resultMap id="BaseResultMap" type="com.teamnine.bean.Follow">
+<mapper namespace="com.studygo.dao.FollowMapper">
+  <resultMap id="BaseResultMap" type="com.studygo.bean.Follow">
     <id column="gid" jdbcType="INTEGER" property="gid" />
     <result column="userid" jdbcType="INTEGER" property="userid" />
     <result column="beuserid" jdbcType="INTEGER" property="beuserid" />
@@ -12,7 +12,7 @@
   </sql>
   
   <!-- Add follow -->
-  <insert id="insert" parameterType="com.teamnine.bean.Follow">
+  <insert id="insert" parameterType="com.studygo.bean.Follow">
     insert into follow
     values (#{gid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, 
     	#{beuserid,jdbcType=INTEGER})
@@ -42,13 +42,13 @@
   </select>
   
   <!-- Unfollow (home page） -->
-  <delete id="deleteByFollow" parameterType="com.teamnine.bean.Follow">
+  <delete id="deleteByFollow" parameterType="com.studygo.bean.Follow">
     delete from follow
     where gid = #{gid,jdbcType=INTEGER}
   </delete>
   
   <!-- Unfollow (personal homepage) -->
-  <delete id="deleteByFollowMyself" parameterType="com.teamnine.bean.Follow">
+  <delete id="deleteByFollowMyself" parameterType="com.studygo.bean.Follow">
     delete from follow
     where userid = #{userid,jdbcType=INTEGER} and beuserid = #{beuserid,jdbcType=INTEGER}
   </delete>

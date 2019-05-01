@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamnine.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="com.teamnine.bean.User">
+<mapper namespace="com.studygo.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.studygo.bean.User">
     <id column="userid" jdbcType="INTEGER" property="userid" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="age" jdbcType="INTEGER" property="age" />
@@ -75,7 +75,7 @@
   </sql>
   
   <!-- Login (query by name and password) -->
-  <select id="selectByUser" parameterType="com.teamnine.bean.User" resultMap="BaseResultMap">
+  <select id="selectByUser" parameterType="com.studygo.bean.User" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from user
@@ -83,7 +83,7 @@
   </select>
   
   <!-- Registration (query by name) -->
-  <select id="selectByUserName" parameterType="com.teamnine.bean.User" resultMap="BaseResultMap">
+  <select id="selectByUserName" parameterType="com.studygo.bean.User" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from user
@@ -91,14 +91,14 @@
   </select>
   
   <!-- Query all users (unconditional) -->
-  <select id="selectByUserAll" parameterType="com.teamnine.bean.User" resultMap="BaseResultMap">
+  <select id="selectByUserAll" parameterType="com.studygo.bean.User" resultMap="BaseResultMap">
     select 
     u.userid, u.name, u.age, u.sex, u.password, u.email, u.family, u.intro, u.time, v.photo userphoto
     from user u left join avatar v on u.userid=v.userid
   </select>
   
   <!-- Query users by userid -->
-  <select id="selectByUserId" parameterType="com.teamnine.bean.User" resultMap="BaseResultMap">
+  <select id="selectByUserId" parameterType="com.studygo.bean.User" resultMap="BaseResultMap">
 	select 
     u.userid, u.name, u.age, u.sex, u.password, u.email, u.family, u.intro, u.time, v.photo userphoto
     from user u left join avatar v on u.userid=v.userid
@@ -119,7 +119,7 @@
     where userid = #{userid,jdbcType=INTEGER}
   </delete>
   
-  <insert id="insert" parameterType="com.teamnine.bean.User">
+  <insert id="insert" parameterType="com.studygo.bean.User">
     insert into user (userid, name, age,
       sex, password, email, 
       family, intro, time
@@ -129,7 +129,7 @@
       #{family,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.teamnine.bean.User">
+  <insert id="insertSelective" parameterType="com.studygo.bean.User">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userid != null">
@@ -240,7 +240,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.teamnine.bean.User">
+  <update id="updateByPrimaryKeySelective" parameterType="com.studygo.bean.User">
     update user
     <set>
       <if test="name != null">
@@ -272,7 +272,7 @@
   </update>
   
   <!-- Edit profile (Update user table) -->
-  <update id="updateByPrimaryKey" parameterType="com.teamnine.bean.User">
+  <update id="updateByPrimaryKey" parameterType="com.studygo.bean.User">
     update user
     set age = #{age,jdbcType=INTEGER},
 	    sex = #{sex,jdbcType=VARCHAR},
@@ -282,7 +282,7 @@
   </update>
   
   <!-- Update of basic setting information (update user table) -->
-  <update id="updateSetupByPrimaryKey" parameterType="com.teamnine.bean.User">
+  <update id="updateSetupByPrimaryKey" parameterType="com.studygo.bean.User">
     update user
     set name = #{name,jdbcType=VARCHAR},
 	    password = #{password,jdbcType=VARCHAR},

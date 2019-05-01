@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamnine.dao.AvatarMapper">
-  <resultMap id="BaseResultMap" type="com.teamnine.bean.Avatar">
+<mapper namespace="com.studygo.dao.AvatarMapper">
+  <resultMap id="BaseResultMap" type="com.studygo.bean.Avatar">
     <id column="userid" jdbcType="INTEGER" property="userid" />
     <result column="photo" jdbcType="VARCHAR" property="photo" />
   </resultMap>
@@ -82,12 +82,12 @@
   </delete>
   
   <!-- Upload user avatar (insert) -->
-  <insert id="insert" parameterType="com.teamnine.bean.Avatar">
+  <insert id="insert" parameterType="com.studygo.bean.Avatar">
     insert into avatar (userid, photo)
     values (#{userid,jdbcType=INTEGER}, #{photo,jdbcType=VARCHAR})
   </insert>
   
-  <insert id="insertSelective" parameterType="com.teamnine.bean.Avatar">
+  <insert id="insertSelective" parameterType="com.studygo.bean.Avatar">
     insert into avatar
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="userid != null">
@@ -128,7 +128,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.teamnine.bean.Avatar">
+  <update id="updateByPrimaryKeySelective" parameterType="com.studygo.bean.Avatar">
     update avatar
     <set>
       <if test="photo != null">
@@ -139,7 +139,7 @@
   </update>
   
   <!-- Update user avatar info by userid -->
-  <update id="updateByPrimaryKey" parameterType="com.teamnine.bean.Avatar">
+  <update id="updateByPrimaryKey" parameterType="com.studygo.bean.Avatar">
     update avatar
     set photo = #{photo,jdbcType=VARCHAR}
     where userid = #{userid,jdbcType=INTEGER}

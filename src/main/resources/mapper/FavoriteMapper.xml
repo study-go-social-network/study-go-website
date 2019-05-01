@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamnine.dao.FavoriteMapper">
-  <resultMap id="BaseResultMap" type="com.teamnine.bean.Favorite">
+<mapper namespace="com.studygo.dao.FavoriteMapper">
+  <resultMap id="BaseResultMap" type="com.studygo.bean.Favorite">
     <id column="sid" jdbcType="INTEGER" property="sid" />
     <result column="userid" jdbcType="INTEGER" property="userid" />
     <result column="fid" jdbcType="INTEGER" property="fid" />
@@ -27,20 +27,20 @@
   </select>
   
   <!-- Add the favorite -->
-  <insert id="insert" parameterType="com.teamnine.bean.Favorite">
+  <insert id="insert" parameterType="com.studygo.bean.Favorite">
     insert into favorite
     values (#{sid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, 
     	#{fid,jdbcType=INTEGER})
   </insert>
   
   <!-- Delete the favorite info -->
-  <delete id="deleteByFavorite" parameterType="com.teamnine.bean.Favorite">
+  <delete id="deleteByFavorite" parameterType="com.studygo.bean.Favorite">
     delete from favorite
     where sid = #{sid,jdbcType=INTEGER}
   </delete>
   
   <!-- Delete the favorite (by userid and fid) -->
-  <delete id="deleteFavoriteByUseridAndFid" parameterType="com.teamnine.bean.Favorite">
+  <delete id="deleteFavoriteByUseridAndFid" parameterType="com.studygo.bean.Favorite">
     delete from favorite
     where userid = #{userid,jdbcType=INTEGER} and fid = #{fid,jdbcType=INTEGER}
   </delete>

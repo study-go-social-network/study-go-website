@@ -9,7 +9,7 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-	<context:component-scan base-package="com.teamnine">
+	<context:component-scan base-package="com.studygo">
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
@@ -42,7 +42,7 @@
 	<!-- Configure the scanner to add the implementation of the mybatis interface to the ioc container -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- Scan all dao interface implementations and add them to the ioc container -->
-		<property name="basePackage" value="com.teamnine.dao"></property>
+		<property name="basePackage" value="com.studygo.dao"></property>
 	</bean>
 	<!--================== Cnfiguration and integration with MyBatis-end=============== -->
 

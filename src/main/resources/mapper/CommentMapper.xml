@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.teamnine.dao.CommentMapper">
-  <resultMap id="BaseResultMap" type="com.teamnine.bean.Comment">
+<mapper namespace="com.studygo.dao.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.studygo.bean.Comment">
     <id column="cid" jdbcType="INTEGER" property="cid" />
     <result column="pcontent" jdbcType="VARCHAR" property="pcontent" />
     <result column="userid" jdbcType="INTEGER" property="userid" />
@@ -76,7 +76,7 @@
   <!-- Query the comment table info by post id (fid) (and query the name by userid)
        First, query all the user who participated in the comment, then query of the comment form by fid.
    -->
-  <select id="selectByCommentFid" parameterType="com.teamnine.bean.Comment" resultMap="BaseResultMap">
+  <select id="selectByCommentFid" parameterType="com.studygo.bean.Comment" resultMap="BaseResultMap">
     select 
     c.cid, c.pcontent, c.userid, c.fid, c.time,u.name
     from comment c,user u
@@ -113,14 +113,14 @@
   </delete>
   
   <!-- Add the comment -->
-  <insert id="insert" parameterType="com.teamnine.bean.Comment">
+  <insert id="insert" parameterType="com.studygo.bean.Comment">
     insert into 
     comment (cid, pcontent, userid, fid, time)
     values (#{cid,jdbcType=INTEGER}, #{pcontent,jdbcType=VARCHAR}, #{userid,jdbcType=INTEGER},
       #{fid,jdbcType=INTEGER}, #{time,jdbcType=TIMESTAMP})
   </insert>
   
-  <insert id="insertSelective" parameterType="com.teamnine.bean.Comment">
+  <insert id="insertSelective" parameterType="com.studygo.bean.Comment">
     insert into comment
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="cid != null">
@@ -191,7 +191,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.teamnine.bean.Comment">
+  <update id="updateByPrimaryKeySelective" parameterType="com.studygo.bean.Comment">
     update comment
     <set>
       <if test="pcontent != null">
@@ -209,7 +209,7 @@
     </set>
     where cid = #{cid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.teamnine.bean.Comment">
+  <update id="updateByPrimaryKey" parameterType="com.studygo.bean.Comment">
     update comment
     set pcontent = #{pcontent,jdbcType=VARCHAR},
       userid = #{userid,jdbcType=INTEGER},
