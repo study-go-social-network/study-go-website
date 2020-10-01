@@ -1,2 +1,2 @@
-# StudyGO (Website)
+# StudyGO - Website
 www.study-go.top
